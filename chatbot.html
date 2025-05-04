@@ -1,0 +1,50 @@
+<!-- Bouton flottant -->
+    <div 
+        id="chatbot-button" class="nes-btn is-warning"
+        style="position: fixed; bottom: 25px; right: 25px; z-index: 9999;"
+        onclick="toggleChat()"> Bonjour ! <!--tu peux mettre ce que tu veux ici et remplace l'emoji-->
+    </div>
+
+<!-- Fenêtre de chat -->
+    <div 
+        id="chatbot-window" 
+        class="nes-container with-title is-rounded"
+        style="
+            display: none; 
+            position: fixed; 
+            bottom: 80px; 
+            right: 20px; 
+            width: 45%; 
+            max-height: 45%; 
+            background: rgb(255, 255, 255); 
+            z-index: 9998;
+            box-shadow: 0 0 8px rgb(0, 0, 0);">
+
+        <p 
+            class="title">Bip-Boup-Bip
+        </p>
+        <div 
+            id="chatbot-content" 
+            class="nes-container is-rounded" 
+            style=
+                "height: 300px; 
+                overflow-y: auto; 
+                background-color: #ffffff; 
+                padding: 1rem; 
+                margin-bottom: 1rem;">
+        </div>
+        <div 
+            class="nes-field" 
+            style="margin-bottom: 0.5rem;">
+            <input 
+                type="text" 
+                id="chatbot-input" 
+                class="nes-input" 
+                placeholder="Que puis-je pour vous ?">
+        </div>
+            <button 
+                class="nes-btn is-success" 
+                onclick="handleUserInput()">
+                    Envoyer
+            </button>
+    </div>

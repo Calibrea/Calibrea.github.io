@@ -1,0 +1,14 @@
+.project {
+    background-color: #e4e4e4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    display: flex;
+}
+
+.Mario {
+    text-align: left;
+}
