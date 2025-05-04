@@ -1,1 +1,113 @@
-"Hello World" 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - BTS SIO SISR</title>
+    <link rel="stylesheet" href="Landing_page.css">
+    <link rel="stylesheet" href="common.css">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav aria-label="Navigation principale">
+            <ul class="menu">
+                <li><a href="about.html" class="nes-btn">À propos</a></li>
+                <li><a href="projects.html" class="nes-btn">Projets</a></li>
+                <li><a href="veille.html" class="nes-btn">Veille Technologique</a></li>
+                <li><a href="contact.html" class="nes-btn">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section id="hero">
+        <div class="photo-bio">
+            <img src="Images/Photo.png" alt="Photo d'identité" class="photo-identite">
+            <div class="bio-message">
+                <h1>VAZ GONCALVES Sonia</h1>
+                <div class="nes-balloon from-left">
+                    <p>Apprentie en BTS SIO option SISR chez <a href="https://seaowlgroup.com/fr/">Seaowl Technology Solutions </a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis une apprentie en <a href="https://www.maestris-bts.com/formation/bts-services-informatiques-aux-organisations/"> BTS SIO</a> option SISR chez <a href="https://www.maestris-bts.com/">Maestris-BTS</a>. Très intéressée par les technologies de l'information et de la communication mais surtout par tout l'aspect cyber qui les entourent. Mon objectif est de devenir Responsable de la Sécurité des Systèmes d'Information au sein d'une entreprise.</p>
+    </section>
+
+     <section id="projects">
+        <h2>Mes projets</h2>
+        <form id="projectForm">
+            <div class="project">
+                <label>
+                    <input type="radio" name="project" value="Projet 1" class="nes-radio" onclick="redirectToProject('Projet 1')">
+                    <span>Projet 1 : Mise en place d'une infrastructure réseau en groupe</span>
+                </label>
+            </div>
+            <div class="project">
+                <label>
+                    <input type="radio" name="project" value="Projet 2" class="nes-radio" onclick="redirectToProject('Projet 2')">
+                    <span>Projet 2 : Mise en place d'une supervision pour Seaowl Technology Solutions</span>
+                </label>
+            </div>
+            <div class="project">
+                <label>
+                    <input type="radio" name="project" value="Projet 3" class="nes-radio" onclick="redirectToProject('Projet 3')">
+                    <span>Projet 3 : Mise en place d'un réseau</span>
+                </label>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        function redirectToProject(project) {
+            // Redirige vers la page "projects.html" avec le projet sélectionné en paramètre dans l'URL
+            window.location.href = "projects.html?project=" + encodeURIComponent(project);
+        }
+    </script>
+    
+    
+    <section id="skills">
+        <h2>Compétences</h2>
+        <ul class="nes-list is-disc">
+            <li>Administration réseaux</li>
+            <li>Sécurité informatique</li>
+            <li>Virtualisation</li>
+            <li>Gestion de serveurs</li>
+        </ul>
+    </section>
+
+    
+    <section id="contact"> 
+        <h2>Contactez-moi</h2>
+        <form action="#" method="post">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- le poti chat robot ici -->
+<script 
+src="chatbot-loader.js">
+</script> 
+
+ 
+</body>
+<footer>
+    <p>&copy; 2025 Salut à tous. Tous droits réservés.</p>
+</footer>
+
+</html>
